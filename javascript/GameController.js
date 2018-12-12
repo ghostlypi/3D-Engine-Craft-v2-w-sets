@@ -17,13 +17,13 @@ class GameController {
           //new Block(this, new Vector3D(0, 0, 0), new Vector3D(0.1, 0.1, 10000), 0.9, "0x0000ff"), // z axis
           new Block(this, new Vector3D(0, 0, 0), new Vector3D(8000, 0.5, 8000), 0.9, "0xaaaaaa", "textures/iron_texture.jpg"), //ground
           //walls
-          new Block(this, new Vector3D(5, 2.6, 0), new Vector3D(0.2, 5, 20), 0, "0x7ec0ee", "textures/LogCabin.jpg"),
-          new Block(this, new Vector3D(-5, 2.6, 0), new Vector3D(0.2, 5, 20), 0, "0x7ec0ee", "textures/LogCabin.jpg"),
+          new Block(this, new Vector3D(5, 2.6, 0), new Vector3D(0.2, 5, 20), 0, "0x7ec0ee", "textures/log_cabin_texture.jpg"),
+          new Block(this, new Vector3D(-5, 2.6, 0), new Vector3D(0.2, 5, 20), 0, "0x7ec0ee", "textures/log_cabin_texture.jpg"),
           //doorway
-          new Block(this, new Vector3D(0, 4, 10), new Vector3D(10, 2.5, 0.5), 0, "0x7ec0ee", "textures/LogCabin.jpg"),
-          new Block(this, new Vector3D(3, 1.5, 10), new Vector3D(4, 2.5, 0.5), 0, "0x7ec0ee", "textures/LogCabin.jpg"),
-          new Block(this, new Vector3D(-3, 1.5, 10), new Vector3D(4, 2.5, 0.5), 0, "0x7ec0ee", "textures/LogCabin.jpg"),
-          new Block(this, new Vector3D(0, 2.6, -10), new Vector3D(10, 5, 0.5), 0, "0x7ec0ee", "textures/LogCabin.jpg"),//wall
+          new Block(this, new Vector3D(0, 4, 10), new Vector3D(10, 2.5, 0.5), 0, "0x7ec0ee", "textures/log_cabin_texture.jpg"),
+          new Block(this, new Vector3D(3, 1.5, 10), new Vector3D(4, 2.5, 0.5), 0, "0x7ec0ee", "textures/log_cabin_texture.jpg"),
+          new Block(this, new Vector3D(-3, 1.5, 10), new Vector3D(4, 2.5, 0.5), 0, "0x7ec0ee", "textures/log_cabin_texture.jpg"),
+          new Block(this, new Vector3D(0, 2.6, -10), new Vector3D(10, 5, 0.5), 0, "0x7ec0ee", "textures/log_cabin_texture.jpg"),//wall
           new Block(this, new Vector3D(0, 0.3, 0), new Vector3D(10, 0.2, 20), 0.9, "0xaaaaaa", "textures/wood_texture.jpg"), //floor
           new Block(this, new Vector3D(0, 5, 0), new Vector3D(10, 0.2, 20), 0.9, "0xaaaaaa", "textures/wood_texture.jpg"), //ceiling
           new Block(this, new Vector3D(0, 0.4, 6.75), new Vector3D(10, 0.2, 5), 0.9, "0xaaaaaa", "textures/wood_texture.jpg"), //step1
