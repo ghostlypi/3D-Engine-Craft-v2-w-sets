@@ -4,7 +4,7 @@ class GameController {
     this.ThreeScene = ThreeScene; // The scene object from Three.js
     this.ThreeCamera = ThreeCamera; // The camara object from Three.js
     this.player = new Player(this, new Vector3D(0, 2, -23), new Vector3D(0.5, 2, 0.5), "0x00ff00", "", {
-        "speed": 20, // Original was 10
+        "speed": 60, // Original was 10
         "jumpSpeed": 520,
         "lookSpeed": 15
     });
@@ -17,15 +17,15 @@ class GameController {
           //new Block(this, new Vector3D(0, 0, 0), new Vector3D(0.1, 0.1, 10000), 0.9, "0x0000ff"), // z axis
           new Block(this, new Vector3D(0, 0, 0), new Vector3D(8000, 0.5, 8000), 0.9, "0xaaaaaa", "textures/iron_texture.jpg"), //ground
           //walls
-          new Block(this, new Vector3D(5, 2.6, 0), new Vector3D(0.2, 5, 20), 0, "0x7ec0ee", "textures/wood_texture.jpg"),
-          new Block(this, new Vector3D(-5, 2.6, 0), new Vector3D(0.2, 5, 20), 0, "0x7ec0ee", "textures/wood_texture.jpg"),
+          new Block(this, new Vector3D(5, 2.6, 0), new Vector3D(0.2, 5, 20), 0, "0x7ec0ee", "textures/LogCabin.jpg"),
+          new Block(this, new Vector3D(-5, 2.6, 0), new Vector3D(0.2, 5, 20), 0, "0x7ec0ee", "textures/LogCabin.jpg"),
           //doorway
-          new Block(this, new Vector3D(0, 4, 10), new Vector3D(10, 2.5, 0.5), 0, "0x7ec0ee", "textures/wood_texture.jpg"),
-          new Block(this, new Vector3D(3, 1.5, 10), new Vector3D(4, 2.5, 0.5), 0, "0x7ec0ee", "textures/wood_texture.jpg"),
-          new Block(this, new Vector3D(-3, 1.5, 10), new Vector3D(4, 2.5, 0.5), 0, "0x7ec0ee", "textures/wood_texture.jpg"),
-          new Block(this, new Vector3D(0, 2.6, -10), new Vector3D(10, 5, 0.5), 0, "0x7ec0ee", "textures/wood_texture.jpg"),//wall
+          new Block(this, new Vector3D(0, 4, 10), new Vector3D(10, 2.5, 0.5), 0, "0x7ec0ee", "textures/LogCabin.jpg"),
+          new Block(this, new Vector3D(3, 1.5, 10), new Vector3D(4, 2.5, 0.5), 0, "0x7ec0ee", "textures/LogCabin.jpg"),
+          new Block(this, new Vector3D(-3, 1.5, 10), new Vector3D(4, 2.5, 0.5), 0, "0x7ec0ee", "textures/LogCabin.jpg"),
+          new Block(this, new Vector3D(0, 2.6, -10), new Vector3D(10, 5, 0.5), 0, "0x7ec0ee", "textures/LogCabin.jpg"),//wall
           new Block(this, new Vector3D(0, 0.3, 0), new Vector3D(10, 0.2, 20), 0.9, "0xaaaaaa", "textures/wood_texture.jpg"), //floor
-          new Block(this, new Vector3D(0, 5, 0), new Vector3D(10, 0.2, 20), 0.9, "0xaaaaaa", "textures/wood_texture.jpg"), //floor
+          new Block(this, new Vector3D(0, 5, 0), new Vector3D(10, 0.2, 20), 0.9, "0xaaaaaa", "textures/wood_texture.jpg"), //ceiling
           new Block(this, new Vector3D(0, 0.4, 6.75), new Vector3D(10, 0.2, 5), 0.9, "0xaaaaaa", "textures/wood_texture.jpg"), //step1
           new Block(this, new Vector3D(0, 0.6, 5.75), new Vector3D(10, 0.2, 3), 0.9, "0xaaaaaa", "textures/wood_texture.jpg"), //step2
           new Block(this, new Vector3D(0, 0.2, 4.25), new Vector3D(6, 2.5, 1), 0.9, "0xaaaaaa", "textures/wood_texture.jpg"), //desk
@@ -78,6 +78,14 @@ class GameController {
           new Block(this, new Vector3D(0+40, 0.4, 6.75), new Vector3D(10, 0.2, 5), 0.9, "0xaaaaaa", "textures/wood_texture.jpg"), //step1
           new Block(this, new Vector3D(0+40, 0.6, 5.75), new Vector3D(10, 0.2, 3), 0.9, "0xaaaaaa", "textures/wood_texture.jpg"), //step2
           new Block(this, new Vector3D(0+40, 0.2, 4.25), new Vector3D(6, 2.5, 1), 0.9, "0xaaaaaa", "textures/wood_texture.jpg"), //desk
+          new Block(this, new Vector3D(4.8+40, 3, -7), new Vector3D(0.2, 2, 3), 0.9, "0xaaaaaa", "textures/USFlag.jpg"), //US Flag
+          new Block(this, new Vector3D(4.8+40, 3, -7+3.2), new Vector3D(0.2, 2, 3), 0.9, "0xaaaaaa", "textures/BritishFlag.jpg"), //British Flag
+          new Block(this, new Vector3D(4.8+40, 3, -7+6.4), new Vector3D(0.2, 2, 3), 0.9, "0xaaaaaa", "textures/FrenchFlag.jpg"), //French Flag
+          new Block(this, new Vector3D(4.8+40, 3, -7+9.6), new Vector3D(0.2, 2, 3), 0.9, "0xaaaaaa", "textures/SovietFlag.jpg"), //Soviet Flag
+          new Block(this, new Vector3D(-4.8+40, 3, -7+9.6), new Vector3D(0.2, 2, 3), 0.9, "0xaaaaaa", "textures/USFlag.jpg"), //US Flag
+          new Block(this, new Vector3D(-4.8+40, 3, -7+6.4), new Vector3D(0.2, 2, 3), 0.9, "0xaaaaaa", "textures/BritishFlag.jpg"), //British Flag
+          new Block(this, new Vector3D(-4.8+40, 3, -7+3.2), new Vector3D(0.2, 2, 3), 0.9, "0xaaaaaa", "textures/FrenchFlag.jpg"), //French Flag
+          new Block(this, new Vector3D(-4.8+40, 3, -7), new Vector3D(0.2, 2, 3), 0.9, "0xaaaaaa", "textures/SovietFlag.jpg"), //Soviet Flag
           //bench1
           new Block(this, new Vector3D(0+40, 0.2, 0-1.5), new Vector3D(6, 2, 0.1), 0.9, "0xaaaaaa", "textures/wood_texture.jpg"),
           new Block(this, new Vector3D(0+40, 0.6, 0.25-1.5), new Vector3D(6, 0.1, 0.4), 0.9, "0xaaaaaa", "textures/wood_texture.jpg"),
